@@ -1,9 +1,9 @@
 import styles from './styles.scss';
 
-import { useRef, useContext } from 'react';
+import { useContext } from 'react';
 
 import Color from '@webdiscus/cie-color';
-import { colorWeightList, generateColorPalettesByRule, getContrastColorTone } from '/@/helpers/color';
+import { getPaletteToneName, generateColorPalettesByRule, getContrastColorTone } from '/@/helpers/color';
 
 import ColorPalette from '/@/components/ColorPalette';
 import ColorPickerContext from '/@/components/ColorPicker/ColorPicker';
@@ -40,9 +40,10 @@ export default function ColorPaletteList() {
     const colorRgb = new Color.Rgb(r, g, b);
     const colorHex = colorRgb.toHex();
     const colorTone = getContrastColorTone(colorRgb);
+    const toneName = getPaletteToneName(index);
 
-    colorCodes.push(`$primary-${colorWeightList[index]}: #${colorHex};`);
-    colorContrastCodes.push(`$primary-${colorWeightList[index]}-contrast: $${colorTone}-color;`);
+    colorCodes.push(`$primary-${toneName}: #${colorHex};`);
+    colorContrastCodes.push(`$primary-${toneName}-contrast: $${colorTone}-color;`);
   });
 
   const generatedCodes = [...colorCodes, '', ...colorContrastCodes].join('<br>');
