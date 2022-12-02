@@ -1,7 +1,7 @@
 import Color from '@webdiscus/cie-color';
 import { ColorPalette } from '@webdiscus/cie-color/src/ColorPalette';
 
-export const colorWeightMap = [
+export const colorWeightList = [
   50,
   100,
   200,
@@ -19,10 +19,10 @@ export const colorWeightMap = [
 ];
 
 export function getContrastColor(rgb) {
-  let white = 'white',
-    black = 'rgba(0, 0, 0, 0.87)';
+  const lightColor = 'white';
+  const darkColor = 'rgba(0, 0, 0, 0.87)';
 
-  return ColorPalette.getColorTone(rgb) === 'dark' ? white : black;
+  return ColorPalette.getColorTone(rgb) === 'dark' ? lightColor : darkColor;
 }
 
 export function getContrastColorTone(rgb) {

@@ -1,7 +1,7 @@
 import styles from './styles.scss';
 
 import Color from '@webdiscus/cie-color';
-import { colorWeightMap, getContrastColor } from '/@/helpers/color';
+import { colorWeightList, getContrastColor } from '/@/helpers/color';
 
 export default function ColorPalette({ palette }) {
   const { baseColorIndex, colors } = palette;
@@ -29,5 +29,5 @@ function getCellStyle({ r, g, b }) {
 }
 
 function getCellText(baseColorIndex, index) {
-  return `${index === baseColorIndex ? '√ ' : ''} ${colorWeightMap[index]}`;
+  return `${index === baseColorIndex ? '√ ' : ''} ${colorWeightList[index]}`;
 }
