@@ -18,12 +18,15 @@ export const colorWeightMap = [
   'A700',
 ];
 
-export function getContrastColor(colorHex) {
-  let rgb = Color.fromHex(colorHex),
-    white = 'white',
+export function getContrastColor(rgb) {
+  let white = 'white',
     black = 'rgba(0, 0, 0, 0.87)';
 
   return ColorPalette.getColorTone(rgb) === 'dark' ? white : black;
+}
+
+export function getContrastColorTone(rgb) {
+  return ColorPalette.getColorTone(rgb) === 'dark' ? 'light' : 'dark';
 }
 
 export function generateColorPalettesByRule(colorHex, colorRule = '') {

@@ -11,16 +11,23 @@ export default function ColorPalette({ palette }) {
   return (
     <div className='color-palette'>
       {colors.map(
-        ({ r, g, b }, index) => <div className='cell' style={{
-          backgroundColor: new Color.Rgb(r, g, b).toCss(),
-          color: getContrastColor(new Color.Rgb(r, g, b).toHex()),
-        }}
-                                     key={index}>{renderCellInnerText(baseColorIndex, index)}
-        </div>)}
+        (rgb, index) => {
+          return <div className='cell' style={getCellStyle(rgb)} key={index}>{getCellText(baseColorIndex,
+            index)} </div>;
+        })}
     </div>
   );
 }
 
-function renderCellInnerText(baseColorIndex, index) {
+function getCellStyle({ r, g, b }) {
+  const rgb = new Color.Rgb(r, g, b);
+
+  return {
+    backgroundColor: rgb.toCss(),
+    color: getContrastColor(rgb),
+  };
+}
+
+function getCellText(baseColorIndex, index) {
   return `${index === baseColorIndex ? '√ ' : ''} ${colorWeightMap[index]}`;
 }
