@@ -1,0 +1,79 @@
+{
+  "name": "@webdiscus/cie-color",
+  "version": "0.0.1-alpha.0",
+  "description": "CIE Color Lib for JavaScript",
+  "keywords": [
+    "cie",
+    "color",
+    "lib",
+    "rgb",
+    "srgb",
+    "hex",
+    "hsl",
+    "hsv",
+    "hwb",
+    "hsi",
+    "lab",
+    "lch",
+    "luv",
+    "xyz",
+    "yxy"
+  ],
+  "license": "ISC",
+  "author": "webdiscus (https://github.com/webdiscus)",
+  "maintainers": [
+    "webdiscus (https://github.com/webdiscus)"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://patreon.com/biodiscus"
+  },
+  "homepage": "https://github.com/webdiscus/cie-color",
+  "bugs": {
+    "url": "https://github.com/webdiscus/cie-color/issues"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdiscus/cie-color.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --collectCoverage",
+    "publish:public": "npm publish --access public",
+    "publish:beta": "npm publish --tag beta"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "src",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=12.13"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@webdiscus/math-utils": "file:packages/math-utils"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.0"
+  }
+}

@@ -1,0 +1,29 @@
+.flex-row,
+.flow-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: stretch;
+}
+
+.flex-column,
+.flow-column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.flex-column {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.max-fit {
+  display: flex;
+
+  > :not(:last-child) {
+    flex-grow: 1;
+    min-width: 10px;
+  }
+}

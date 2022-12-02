@@ -1,0 +1,16 @@
+{
+  "name": "@webdiscus/math-utils",
+  "version": "0.0.1",
+  "description": "Useful math functions and constants.",
+  "author": "@webdiscus",
+  "license": "ISC",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --collectCoverage"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}

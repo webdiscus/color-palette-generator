@@ -1,0 +1,22 @@
+$size: 10px;
+
+.thumb {
+  &:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 100%;
+  }
+
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+}

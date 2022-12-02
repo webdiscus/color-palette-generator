@@ -1,0 +1,22 @@
+{
+  "name": "@webdiscus/rect-slider",
+  "version": "0.0.1",
+  "author": "@webdiscus",
+  "license": "ISC",
+  "description": "Rect slider",
+  "keywords": [
+    "rect",
+    "rectangle",
+    "point",
+    "picker",
+    "selector",
+    "slider"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+  },
+  "dependencies": {
+  }
+}

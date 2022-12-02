@@ -1,0 +1,20 @@
+.range-slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 16px;
+  flex-direction: column;
+  justify-content: center;
+
+  &:focus .thumb,
+  &:active .thumb {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(255, 255, 255, 0.5);
+  }
+
+  .track {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ececec;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@webdiscus/range-slider",
+  "version": "0.0.1",
+  "author": "@webdiscus",
+  "license": "ISC",
+  "description": "Range slider",
+  "keywords": [
+    "range",
+    "slider"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+  },
+  "dependencies": {
+  }
+}
